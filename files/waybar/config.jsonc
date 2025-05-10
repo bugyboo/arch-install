@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "memory", "battery", "tray"],
+    // Hyprland Workspaces
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    // Current window title
+    "hyprland/window": {
+        "max-length": 50,
+        "separate-outputs": true
+    },
+    // Clock
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+    // Audio
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "🔇",
+        "format-icons": {
+            "default": ["🔈", "🔉", "🔊"]
+        },
+        "on-click": "pavucontrol"
+    },
+    // Network
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) 📶",
+        "format-ethernet": "🖧",
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-applet"
+    },
+    // Memory usage
+    "memory": {
+        "format": "{}% 🖥",
+        "interval": 5,
+        "tooltip-format": "Memory: {used:0.1f}G/{total:0.1f}G",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },    
+    // Battery (remove if not on a laptop)
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ⚡",
+        "format-icons": ["🪫", "🔋"]
+    },
+    // System tray
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}
