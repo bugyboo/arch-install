@@ -1,6 +1,6 @@
 # Hyprland setup
 
-- sudo pacman -S gdm hyprland uwsm xdg-desktop-portal-hyprland
+- sudo pacman -S sddm hyprland uwsm xdg-desktop-portal-hyprland
 
 ## Hyprland Config
 
