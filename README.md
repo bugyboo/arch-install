@@ -47,7 +47,7 @@ pacstrap -K /mnt base linux linux-firmware intel-ucode nano vim networkmanager w
 - nano /etc/locale.gen
 - locale-gen
 - echo LANG=en_US.UTF-8 > /etc/locale.conf
-
+- echo Archfish > /etc/hostname
 - nano /etc/hosts
     ```
     127.0.0.1     localhost
