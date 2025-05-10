@@ -4,7 +4,7 @@
     "height": 26,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "memory", "battery", "tray"],
+    "modules-right": ["hyprland/language", "keyboard-state", "pulseaudio", "network", "memory", "battery", "tray"],
     // Hyprland Workspaces
     "hyprland/workspaces": {
         "format": "{name}",
@@ -20,6 +20,22 @@
     "clock": {
         "format": "{:%Y-%m-%d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+    // Language
+    "hyprland/language": {
+    	"format": "{}",
+    	"format-en": "En",
+    	"format-ar": "Ar",
+    	"keyboard-name": "at-translated-set-2-keyboard"
+    },
+    // Keyboard layout indicator
+    "keyboard-state": {
+        "format": "{name}", // Displays layout name (e.g., "us", "fr")
+        "format-icons": {
+            "us": "🇺🇸",
+            "ar": "🇫🇷"
+        },
+        "tooltip-format": "Layout: {name}"
     },
     // Audio
     "pulseaudio": {
