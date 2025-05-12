@@ -50,6 +50,7 @@ window#waybar.hidden {
     background-color: #f38ba8;
 }
 
+#language,
 #clock,
 #pulseaudio,
 #custom-logo,
@@ -57,6 +58,7 @@ window#waybar.hidden {
 #custom-music-player,
 #cpu,
 #tray,
+#network,
 #memory,
 #window,
 #custom-screen-recorder,
@@ -109,6 +111,18 @@ window#waybar.empty #window {
     margin-left: 0;
     color: #cba6f7;
 }
+
+#network {
+    margin-left: 0;
+    color: #cba6f6;
+}
+
+#language {
+    margin-left: 0;
+    color: #cba6f6;
+}
+
+
 
 #clock {
     color: #74c7ec;
