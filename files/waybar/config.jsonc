@@ -4,7 +4,7 @@
     "height": 26,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language", "keyboard-state", "pulseaudio", "network", "memory", "battery", "tray"],
+    "modules-right": ["hyprland/language", "pulseaudio", "network", "memory", "battery", "tray", "custom/power"],
     // Hyprland Workspaces
     "hyprland/workspaces": {
         "format": "{name}",
@@ -18,8 +18,9 @@
     },
     // Clock
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    "format": "{:%A, %B %d, %I:%M:%S %p}",
+    "tooltip-format": "<big>{:%B %d}</big>\n<tt>{calendar}</tt>",
+	"interval": 1
     },
     // Language
     "hyprland/language": {
@@ -28,28 +29,19 @@
     	"format-ar": "Ar",
     	"keyboard-name": "at-translated-set-2-keyboard"
     },
-    // Keyboard layout indicator
-    "keyboard-state": {
-        "format": "{name}", // Displays layout name (e.g., "us", "fr")
-        "format-icons": {
-            "us": "🇺🇸",
-            "ar": "🇫🇷"
-        },
-        "tooltip-format": "Layout: {name}"
-    },
     // Audio
     "pulseaudio": {
         "format": "{volume}% {icon}",
-        "format-muted": "🔇",
+        "format-muted": "",
         "format-icons": {
-            "default": ["🔈", "🔉", "🔊"]
+            "default": ["", "🔉", "🔊"]
         },
         "on-click": "pavucontrol"
     },
     // Network
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) 📶",
-        "format-ethernet": "🖧",
+        "format-ethernet": "",
         "format-disconnected": "⚠",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-applet"
@@ -78,5 +70,17 @@
     "tray": {
         "icon-size": 16,
         "spacing": 10
-    }
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
+    }    
 }
