@@ -2,7 +2,7 @@
     min-height: 0;
     /* font-family: Lexend, "Font Awesome 6 Free Solid"; */
     font-family: JetBrainsMono Nerd Font;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -61,6 +61,7 @@ window#waybar.hidden {
 #network,
 #memory,
 #window,
+#battery,
 #custom-screen-recorder,
 #custom-gpu {
     min-height: 0;
@@ -109,6 +110,7 @@ window#waybar.empty #window {
 
 #memory {
     margin-left: 0;
+    margin-right: 0;
     color: #cba6f7;
 }
 
@@ -148,10 +150,14 @@ window#waybar.empty #window {
     color: #89b4fa;
 }
 
+#battery {
+    color: #89b4fa;
+}
+
 #custom-power {
     color: #f38ba8;
     padding-right: 5px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 @keyframes blink {

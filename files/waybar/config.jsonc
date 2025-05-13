@@ -2,9 +2,9 @@
     "layer": "top",
     "position": "top",
     "height": 26,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["network#speed", "hyprland/language", "pulseaudio", "network", "memory", "battery", "tray", "custom/power"],
+    "modules-right": ["network#speed", "network", "pulseaudio", "memory", "cpu", "battery", "tray", "custom/power"],
     // Hyprland Workspaces
     "hyprland/workspaces": {
         "format": "{name}",
@@ -18,7 +18,7 @@
     },
     // Clock
     "clock": {
-    "format": "{:%A, %B %d, %I:%M:%S %p}",
+    "format": "{:%a, %B %d, %I:%M:%S %p}",
     "tooltip-format": "<big>{:%B %d}</big>\n<tt>{calendar}</tt>",
 	"interval": 1
     },
@@ -27,22 +27,22 @@
     	"format": "{}",
     	"format-en": "En",
     	"format-ar": "Ar",
-    	"keyboard-name": "at-translated-set-2-keyboard"
+	"keyboard-name": "at-translated-set-2-keyboard"
     },
     // Audio
     "pulseaudio": {
         "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
-            "default": ["", "🔉", "🔊"]
+            "default": ["", "", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
     "network#speed": {
         "interval": 1,
         "format": "{ifname}",
-        "format-wifi": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
-        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
         "format-disconnected": "󰌙",
         "tooltip-format": "{ipaddr}",
         "format-linked": "󰈁 {ifname} (No IP)",
@@ -54,7 +54,7 @@
     },    
     // Network
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) 📶",
+        "format-wifi": "󰖩",
         "format-ethernet": "",
         "format-disconnected": "⚠",
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
@@ -62,13 +62,19 @@
     },
     // Memory usage
     "memory": {
-        "format": "{}% 🖥",
+        "format": "{}%  ",
         "interval": 5,
-        "tooltip-format": "Memory: {used:0.1f}G/{total:0.1f}G",
+        "tooltip-format": "Memory: {used}/{total}\n  Swap: {swapUsed}/{swapTotal}",
         "states": {
             "warning": 70,
             "critical": 90
         }
+    },    
+    // CPU usage
+    "cpu": {
+        "interval": 5,
+        "format": "{}% ",
+        "max-length": 10
     },    
     // Battery (remove if not on a laptop)
     "battery": {
@@ -78,7 +84,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ⚡",
-        "format-icons": ["🪫", "🔋"]
+        "format-icons": ["", ""]
     },
     // System tray
     "tray": {
@@ -91,7 +97,7 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
+			"shutdown": "shutdown now",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
