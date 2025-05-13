@@ -4,7 +4,7 @@
     "height": 26,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language", "pulseaudio", "network", "memory", "battery", "tray", "custom/power"],
+    "modules-right": ["network#speed", "hyprland/language", "pulseaudio", "network", "memory", "battery", "tray", "custom/power"],
     // Hyprland Workspaces
     "hyprland/workspaces": {
         "format": "{name}",
@@ -38,6 +38,20 @@
         },
         "on-click": "pavucontrol"
     },
+    "network#speed": {
+        "interval": 1,
+        "format": "{ifname}",
+        "format-wifi": "{icon} {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes} ",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ipaddr}",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌘",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+        "max-length": 30,
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+    },    
     // Network
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) 📶",
