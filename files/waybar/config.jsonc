@@ -27,7 +27,7 @@
     	"format": "{}",
     	"format-en": "En",
     	"format-ar": "Ar",
-	"keyboard-name": "at-translated-set-2-keyboard"
+	"keyboard-name": "asus-keyboard"
     },
     // Audio
     "pulseaudio": {
