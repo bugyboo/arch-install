@@ -50,6 +50,7 @@ window#waybar.hidden {
     background-color: #f38ba8;
 }
 
+#custom-power_profile,
 #language,
 #clock,
 #pulseaudio,
@@ -124,7 +125,10 @@ window#waybar.empty #window {
     color: #cba6f6;
 }
 
-
+#custom-power_profile {
+    font-size: 18px;
+    color: #f38ba8;
+}
 
 #clock {
     color: #74c7ec;

@@ -4,7 +4,7 @@
     "height": 26,
     "modules-left": ["hyprland/workspaces", "hyprland/language", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["network#speed", "network", "pulseaudio", "memory", "cpu", "battery", "tray", "custom/power"],
+    "modules-right": ["network#speed", "network", "custom/power_profile", "pulseaudio", "memory", "cpu", "battery", "tray", "custom/power"],
     // Hyprland Workspaces
     "hyprland/workspaces": {
         "format": "{name}",
@@ -60,6 +60,15 @@
         "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "nm-applet"
     },
+    //shows the current power profile and switches to next on click    
+    "custom/power_profile": {
+        "exec": "~/.config/waybar/scripts/power_profile",
+        "return-type": "json",
+        "interval": 20,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/power_profile next",
+        "signal": 8
+    },    
     // Memory usage
     "memory": {
         "format": "{}%  ",
