@@ -50,6 +50,7 @@ window#waybar.hidden {
     background-color: #f38ba8;
 }
 
+#temperature,
 #custom-power_profile,
 #language,
 #clock,
@@ -99,6 +100,12 @@ window#waybar.empty #window {
 
 #cpu {
     color: #94e2d5;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#temperature {
+    color: #f38ba8;
     margin-left: 0;
     margin-right: 0;
 }
