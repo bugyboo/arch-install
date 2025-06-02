@@ -6,7 +6,7 @@
 
 ```
     {
-        "data-root": "/home/user/docker"
+        "data-root": "/home/$user/docker"
     }
 ```
 
