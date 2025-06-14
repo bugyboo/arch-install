@@ -2,16 +2,35 @@
     min-height: 0;
     /* font-family: Lexend, "Font Awesome 6 Free Solid"; */
     font-family: JetBrainsMono Nerd Font;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 
+#custom-archlogo {
+  padding: 4px 12px;
+  font-size: 24px;
+  color: #89b4fa;
+  /* Adjust as needed */
+}
+
+#window {
+    color: #a6e3a1;
+    min-height: 0;
+    padding: 2px 10px;
+    border-radius: 8px;
+    margin: 4px 4px;    
+}
+
 window#waybar {
+    border-radius: 12px;
+    border-width: 1.2pt;
+    border-color: rgba(52, 67, 82, 0.8);
+    border-style: solid;
     transition-property: background-color;
     transition-duration: 0.5s;
     /* background-color: #1e1e2e; */
     /* background-color: #181825; */
-    background-color: rgba(24, 24, 37, 0.8);
+    background-color: rgba(33, 33, 50, 0.8);
 }
 
 window#waybar.hidden {
@@ -32,13 +51,16 @@ window#waybar.hidden {
     border-radius: 8px;
     background-color: #181825;
     color: #cdd6f4;
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;    
 }
 
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #1e1e2e;
-    background-color: #cdd6f4;
+    background-color: #cdd6f4;        
 }
 
 #workspaces button.active {
@@ -50,27 +72,23 @@ window#waybar.hidden {
     background-color: #f38ba8;
 }
 
-#temperature,
-#custom-power_profile,
-#language,
-#clock,
 #pulseaudio,
 #custom-logo,
 #custom-power,
 #custom-music-player,
-#cpu,
+#custom-gpuinfo
 #tray,
 #network,
-#memory,
-#window,
 #battery,
-#custom-screen-recorder,
-#custom-gpu {
+#custom-screen-recorder {
     min-height: 0;
     padding: 2px 10px;
     border-radius: 8px;
     margin: 4px 4px;
     background-color: #181825;
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;    
 }
 
 #custom-sep {
@@ -102,51 +120,94 @@ window#waybar.empty #window {
     color: #94e2d5;
     margin-left: 0;
     margin-right: 0;
+    min-height: 0;
+    /* padding: 2px 2px; */
+    padding-left: 10px;
+    border-radius: 8px;
+    margin: 4px 4px;
+    background-color: #181825;    
 }
 
 #temperature {
     color: #f38ba8;
     margin-left: 0;
     margin-right: 0;
+    min-height: 0;
+    padding-left: 4px;
+    padding-right: 10px;
+    margin: 4px 4px;        
 }
 
-#custom-gpu {
+#custom-gpuinfo {
     color: #94e2d5;
     margin-left: 0;
     margin-right: 0;
+    min-height: 0;
+    padding-left: 4px;
+    padding-right: 0;
+    margin: 4px 0 4px 0px;        
 }
 
 #memory {
+    color: #94e2d5;
     margin-left: 0;
     margin-right: 0;
-    color: #cba6f7;
+    min-height: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    margin: 4px 4px;    
+    background-color: #0078D4;    
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;    
 }
 
 #network {
     margin-left: 0;
+    padding-right: 20px;    
     color: #cba6f6;
 }
 
 #language {
+    color: #94E2D5;
     margin-left: 0;
-    color: #cba6f6;
+    margin-right: 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-height: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 8px;
+    margin: 4px 4px;    
+    background-color: #0078D4;  
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;         
 }
 
-#custom-power_profile {
+#custom-power {
     font-size: 18px;
     color: #f38ba8;
+    background-color: #000000;
 }
 
 #clock {
     color: #74c7ec;
+    min-height: 0;
+    padding: 2px 10px;
+    border-radius: 18px;
+    margin: 4px 4px;
+    background-color: #181825; 
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;          
 }
 
 #clock.simpleclock {
     color: #89b4fa;
-}
-
-#window {
-    color: #a6e3a1;
 }
 
 #pulseaudio {
@@ -168,7 +229,7 @@ window#waybar.empty #window {
 #custom-power {
     color: #f38ba8;
     padding-right: 5px;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 
 @keyframes blink {
@@ -183,6 +244,6 @@ tooltip {
 }
 
 #tray menu {
-    background: rgb(24, 24, 37);
+    background: rgb(24, 24, 37);    
     color: white;
 }
