@@ -10,7 +10,7 @@
 
     "modules-left": ["custom/archlogo", "hyprland/workspaces", "hyprland/language", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["network#speed", "network", "custom/gpuinfo", "temperature", "pulseaudio", "memory", "cpu", "tray", "custom/power"],
+    "modules-right": ["network#speed", "network", "custom/gpuinfo", "temperature", "pulseaudio", "custom/nvidia-gpu", "memory", "cpu", "tray", "custom/power"],
     
     // Arch Linux logo
     "custom/archlogo": {
@@ -79,7 +79,14 @@
         "tooltip": true,
         "tooltip-format": "{icon} GPU Temp: {text}°C",        
         "format-icons": ["", "", ""]
-    },    
+    },
+    "custom/nvidia-gpu": {
+        "exec": "~/.config/waybar/nvidia-gpu.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{text} ",      
+        "tooltip": true
+    },        
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",

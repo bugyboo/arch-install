@@ -163,6 +163,21 @@ window#waybar.empty #window {
     border-style: solid;    
 }
 
+#custom-nvidia-gpu {
+    color: #571414;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 0;
+    padding-left: 10px;
+    padding-right: 18px;
+    border-radius: 8px;
+    margin: 4px 4px;    
+    background-color: #F38BA8;    
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;     
+}
+
 #network {
     margin-left: 0;
     padding-right: 20px;    
