@@ -14,6 +14,9 @@ default-timeout=10000
 ignore-timeout=1
 font=JetBrainsMono Nerd Font 12
 
+[app-name=wp-vol grouped]
+format=<b>%s</b>\n%b
+
 [app-name=wp-vol]
 group-by=app-name
 layer=overlay
