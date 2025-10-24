@@ -54,7 +54,10 @@ pacstrap -K /mnt base linux linux-firmware intel-ucode nano vim networkmanager w
     ::1           localhost
     127.0.1.1     Archfish.localdomain    localhost
     ```
-
+- Edit mkinitcpio.conf
+    ```
+    HOOKS=(base systemd autodetect microcode modconf kms keyboard keymap consolefont block filesystems fsck)
+    ```
 - mkinitcpio -P
 - passwd
 - useradd -m username
