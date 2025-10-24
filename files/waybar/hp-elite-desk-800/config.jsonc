@@ -1,0 +1,119 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 5,
+    "margin-bottom": 0,
+    "margin-left": 8,
+    "margin-right": 8,
+    // "border-radius": 10,
+
+    "modules-left": ["custom/archlogo", "hyprland/workspaces", "hyprland/language", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["network#speed", "network", "temperature#gpu", "temperature", "pulseaudio", "memory", "cpu", "tray", "custom/power"],
+    
+    // Arch Linux logo
+    "custom/archlogo": {
+        "format": "",
+        "tooltip": false        
+    },    
+    // Hyprland Workspaces
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+    // Current window title
+    "hyprland/window": {
+        "max-length": 50,
+        "separate-outputs": true
+    },
+    // Clock
+    "clock": {
+    "format": "{:%a, %B %d, %I:%M:%S %p}",
+    "tooltip-format": "<big>{:%B %d}</big>\n<tt>{calendar}</tt>",
+	"interval": 1
+    },
+    // Language
+    "hyprland/language": {
+    	"format": "{}",
+    	"format-en": "En",
+    	"format-ar": "Ar",
+	"keyboard-name": "primax-hp-wired-desktop-320k-keyboard"
+    },
+    // Audio
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", "󰕾"]
+        },
+        "on-click": "pwvucontrol"
+    },
+    "network#speed": {
+        "interval": 1,
+        "format": "{ifname}",
+        "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ipaddr}",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌘",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+        "max-length": 30,
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+    },    
+    // Network
+    "network": {
+        "format-wifi": "󰖩",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-applet"
+    },  
+    "temperature#gpu": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        // "tooltip-format": "{icon}CPU Temp: {temperatureC}°C",
+        "format": "{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        // "tooltip-format": "{icon}CPU Temp: {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    // Memory usage
+    "memory": {
+        "format": "{}%  ",
+        "interval": 5,
+        "tooltip-format": "Memory: {used}/{total}\n  Swap: {swapUsed}/{swapTotal}",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },    
+    // CPU usage
+    "cpu": {
+        "interval": 5,
+        "format": "{}%  ",
+        "max-length": 10
+    },    
+    // System tray
+    "tray": {
+        "icon-size": 22,
+        "spacing": 10
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+        "on-click": "wlogout --protocol layer-shell"
+    }    
+}
