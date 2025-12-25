@@ -1,8 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 42,
-    "margin-top": 5,
+    "height": 24,
+    "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 8,
     "margin-right": 8,
@@ -10,7 +10,7 @@
 
     "modules-left": ["custom/archlogo", "hyprland/workspaces", "hyprland/language", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["network#speed", "network", "custom/gpuinfo", "temperature", "pulseaudio", "custom/nvidia-gpu", "memory", "cpu", "tray", "custom/power"],
+    "modules-right": ["network#speed", "network", "custom/gpuinfo", "temperature", "custom/nvidia-gpu", "memory", "cpu", "pulseaudio", "tray", "custom/power"],
     
     // Arch Linux logo
     "custom/archlogo": {
@@ -36,7 +36,7 @@
     },
     // Language
     "hyprland/language": {
-    	"format": "{}",
+    	"format": " {}",
     	"format-en": "En",
     	"format-ar": "Ar",
 	"keyboard-name": "sino-wealth-gaming-kb-"

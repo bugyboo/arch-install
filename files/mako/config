@@ -1,18 +1,18 @@
 anchor=top-center
 sort=-time
 layer=top
-background-color=#181825
-width=450
+background-color=#282D34
+width=600
 height=200
 border-size=1
-border-color=#72B2FE
+border-color=#9ECAFF
 border-radius=15
 padding=20
 icons=1
-max-icon-size=128
+max-icon-size=64
 default-timeout=10000
 ignore-timeout=1
-font=JetBrainsMono Nerd Font 12
+font=JetBrainsMono Nerd Font 14
 
 [app-name=wp-vol grouped]
 format=<b>%s</b>\n%b
@@ -23,16 +23,16 @@ layer=overlay
 history=0
 anchor=center
 default-timeout=700
-background-color=#232435
+background-color=#282D34
 width=650
 height=150
-border-size=1
+border-size=0
 border-color=#FFFFFF
 border-radius=0
 text-color=#FFFFFF
-progress-color=#B4BEFE
-max-icon-size=128
-font=JetBrainsMono Nerd Font 18
+progress-color=#0078D4
+max-icon-size=64
+font=JetBrainsMono Nerd Font 16
 padding=10,20
 
 [mode=do-not-disturb]
@@ -40,4 +40,3 @@ invisible=1
 
 [mode=do-not-disturb app-name=wp-vol]
 invisible=0
-

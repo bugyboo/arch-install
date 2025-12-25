@@ -1,0 +1,22 @@
+general {
+    lock_cmd = pidof hyprlock || hyprlock  # Command to lock the screen (requires Hyprlock)
+
+    # before_sleep_cmd = loginctl lock-session  # Locks session before suspending
+    # after_sleep_cmd = hyprctl dispatch dpms on  # Resets Hyprland state after waking
+}
+
+listener {
+    timeout = 300  #300 5 minutes (in seconds)
+    on-timeout = pidof hyprlock || hyprctl dispatch dpms off # Turns off the display after timeout
+    on-resume = hyprctl dispatch dpms on # Turns on the display when resumed
+}
+
+listener {
+    timeout = 600  # 10 minutes (in seconds)
+    on-timeout = pidof hyprlock || systemctl suspend  # Locks the screen after timeout        
+}
+
+# listener {
+#     timeout = 50  # 10 minutes (in seconds)
+#     on-timeout = systemctl suspend  # Suspends the system
+# }
