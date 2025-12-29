@@ -1,8 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 34,
-    "margin-top": 5,
+    "height": 24,
+    "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 8,
     "margin-right": 8,
@@ -36,7 +36,7 @@
     },
     // Language
     "hyprland/language": {
-    	"format": "{}",
+    	"format": " {}",
     	"format-en": "En",
     	"format-ar": "Ar",
 	"keyboard-name": "primax-hp-wired-desktop-320k-keyboard"

@@ -3,18 +3,11 @@
     /* font-family: Lexend, "Font Awesome 6 Free Solid"; */
     font-family: JetBrainsMono Nerd Font;
     font-size: 16px;
-    font-weight: 500;
-}
-
-#custom-archlogo {
-  padding: 4px 12px;
-  font-size: 24px;
-  color: #89b4fa;
-  /* Adjust as needed */
+    font-weight: 300;
 }
 
 #window {
-    color: #a6e3a1;
+    color: rgba(239, 243, 247, 0.8);
     min-height: 0;
     padding: 2px 10px;
     border-radius: 8px;
@@ -24,17 +17,17 @@
 window#waybar {
     border-radius: 12px;
     border-width: 1.2pt;
-    border-color: rgba(52, 67, 82, 0.8);
-    border-style: solid;
+    /* border-color: rgba(52, 67, 82, 0.8); */
+    /* border-style: solid; */
     transition-property: background-color;
     transition-duration: 0.5s;
     /* background-color: #1e1e2e; */
     /* background-color: #181825; */
-    background-color: rgba(33, 33, 50, 0.8);
+    background-color: rgba(13, 14, 16, 1.0);
 }
 
 window#waybar.hidden {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 #workspaces {
@@ -45,12 +38,12 @@ window#waybar.hidden {
     all: initial;
     min-width: 0;
     box-shadow: inset 0 -3px transparent;
-    padding: 2px 10px;
+    padding: 1px 10px;
     min-height: 0;
     margin: 4px 4px;
-    border-radius: 8px;
-    background-color: #181825;
-    color: #cdd6f4;
+    border-radius: 100%;
+    background-color: rgba(40, 45, 52, 0.8);
+    color: rgba(239, 243, 247, 0.8);
     border-color: #01122A;
     border-width: 1.0pt;
     border-style: solid;    
@@ -60,16 +53,24 @@ window#waybar.hidden {
     box-shadow: inherit;
     text-shadow: inherit;
     color: #1e1e2e;
-    background-color: #cdd6f4;        
+    background-color: rgba(158, 202, 255, 0.8);        
 }
 
 #workspaces button.active {
     color: #1e1e2e;
-    background-color: #89b4fa;
+    background-color: rgba(158, 202, 255, 1.0);
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
+    color: #1e1e2e;
+    background-color: rgba(255, 107, 107, 1.0);
+}
+
+#custom-archlogo {
+  padding: 4px 12px;
+  font-size: 24px;
+  color: rgba(133, 176, 222, 0.8);
+  /* Adjust as needed */
 }
 
 #pulseaudio,
@@ -85,7 +86,7 @@ window#waybar.hidden {
     padding: 2px 10px;
     border-radius: 8px;
     margin: 4px 4px;
-    background-color: #181825;
+    background-color: rgba(40, 45, 52, 1.0);
     border-color: #01122A;
     border-width: 1.0pt;
     border-style: solid;    
@@ -117,7 +118,7 @@ window#waybar.empty #window {
 }
 
 #cpu {
-    color: #94e2d5;
+    color: rgba(158, 202, 255, 0.8);
     margin-left: 0;
     margin-right: 0;
     min-height: 0;
@@ -125,17 +126,17 @@ window#waybar.empty #window {
     padding-left: 10px;
     border-radius: 8px;
     margin: 4px 4px;
-    background-color: #181825;    
+    /* background-color: rgba(40, 45, 52, 0.8);     */
 }
 
 #temperature {
-    color: #f38ba8;
+    color: rgba(158, 202, 255, 0.8);
     margin-left: 0;
     margin-right: 0;
     min-height: 0;
-    padding-left: 0;
-    padding-right: 6px;
-    margin: 4px 4px;        
+    padding-left: 4px;
+    padding-right: 10px;
+    margin: 4px 4px;            
 }
 
 #temperature.gpu {
@@ -159,7 +160,7 @@ window#waybar.empty #window {
 }
 
 #memory {
-    color: #94e2d5;
+    color: #1e1e2e;
     margin-left: 0;
     margin-right: 0;
     min-height: 0;
@@ -167,7 +168,7 @@ window#waybar.empty #window {
     padding-right: 10px;
     border-radius: 8px;
     margin: 4px 4px;    
-    background-color: #0078D4;    
+    background-color: rgba(158, 202, 255, 0.8);    
     border-color: #01122A;
     border-width: 1.0pt;
     border-style: solid;    
@@ -175,12 +176,14 @@ window#waybar.empty #window {
 
 #network {
     margin-left: 0;
-    padding-right: 20px;    
-    color: #cba6f6;
+    padding-left: 2px;
+    padding-right: 8px;    
+    color: rgba(158, 202, 255, 0.8);
+    background-color: transparent;
 }
 
 #language {
-    color: #94E2D5;
+    color: rgba(40, 45, 52, 1.0);   
     margin-left: 0;
     margin-right: 0;
     margin-top: 8px;
@@ -191,8 +194,9 @@ window#waybar.empty #window {
     padding-left: 6px;
     padding-right: 6px;
     border-radius: 8px;
-    margin: 4px 4px;    
-    background-color: #0078D4;  
+    margin: 4px 4px;   
+    font-weight: bold;
+    background-color: rgba(158, 202, 255, 1.0); 
     border-color: #01122A;
     border-width: 1.0pt;
     border-style: solid;         
@@ -200,17 +204,18 @@ window#waybar.empty #window {
 
 #custom-power {
     font-size: 18px;
-    color: #f38ba8;
-    background-color: #000000;
+    color: rgba(158, 202, 255, 1.0);
+    padding-right: 5px;
+    background-color: rgba(40, 45, 52, 1.0);
 }
 
 #clock {
-    color: #74c7ec;
+    color: rgba(239, 243, 247, 1.0);
     min-height: 0;
-    padding: 2px 10px;
+    padding: 4px 10px;
     border-radius: 18px;
     margin: 4px 4px;
-    background-color: #181825; 
+    background-color: rgba(40, 45, 52, 1.0); 
     border-color: #01122A;
     border-width: 1.0pt;
     border-style: solid;          
@@ -221,7 +226,15 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-    color: #b4befe;
+    color: rgba(158, 202, 255, 1.0);
+    min-height: 0;
+    padding: 4px 10px;
+    border-radius: 18px;
+    margin: 4px 4px;
+    background-color: rgba(40, 45, 52, 1.0); 
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid; 
 }
 
 #pulseaudio.muted {
@@ -236,12 +249,6 @@ window#waybar.empty #window {
     color: #89b4fa;
 }
 
-#custom-power {
-    color: #f38ba8;
-    padding-right: 5px;
-    /* font-size: 16px; */
-}
-
 @keyframes blink {
     to {
         background-color: #f38ba8;
@@ -253,7 +260,20 @@ tooltip {
     border-radius: 8px;
 }
 
-#tray menu {
-    background: rgb(24, 24, 37);    
-    color: white;
+#tray {
+    color: rgba(158, 202, 255, 1.0);
+    min-height: 0;
+    padding: 4px 10px;
+    border-radius: 18px;
+    margin: 4px 4px;
+    background-color: rgba(40, 45, 52, 1.0); 
+    border-color: #01122A;
+    border-width: 1.0pt;
+    border-style: solid;       
 }
+
+#tray menu {
+    background: rgba(40, 45, 52, 1.0);    
+    color: white;     
+}
+
