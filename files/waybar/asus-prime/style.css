@@ -61,6 +61,11 @@ window#waybar.hidden {
     background-color: rgba(158, 202, 255, 1.0);
 }
 
+#workspaces button.empty {
+    opacity: 0.4;
+    color: #000000;           /* lighter text */
+}
+
 #workspaces button.urgent {
     color: #1e1e2e;
     background-color: rgba(255, 107, 107, 1.0);
